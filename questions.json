@@ -1,0 +1,108 @@
+[
+   
+   {
+      "id": 1,
+      "text": "What is the default value for box-sizing in CSS?",
+      "answers": [
+         {
+            "id": 1,
+            "text": "border-box",
+            "isCorrect": false
+         },
+         {
+            "id": 2,
+            "text": "content-box",
+            "isCorrect": true
+         },
+         {
+            "id": 3,
+            "text": "inherit",
+            "isCorrect": false
+         }
+      ]
+   },
+   {
+      "id": 2,
+      "text": "Which property is used to change the background color?",
+      "answers": [
+         {
+            "id": 1,
+            "text": "background-color",
+            "isCorrect": true
+         },
+         {
+            "id": 2,
+            "text": "bg-color",
+            "isCorrect": false
+         },
+         {
+            "id": 3,
+            "text": "color",
+            "isCorrect": false
+         }
+      ]
+   },
+   {
+      "id": 3,
+      "text": "What is the default value for box-sizing in CSS?",
+      "answers": [
+         {
+            "id": 1,
+            "text": "ad",
+            "isCorrect": false
+         },
+         {
+            "id": 2,
+            "text": "cs",
+            "isCorrect": true
+         },
+         {
+            "id": 3,
+            "text": "ins",
+            "isCorrect": false
+         }
+      ]
+   },
+   {
+      "id": 4,
+      "text": "How do you select an element with id 'demo'?",
+      "answers": [
+         {
+            "id": 1,
+            "text": "*demo",
+            "isCorrect": false
+         },
+         {
+            "id": 2,
+            "text": "#demo",
+            "isCorrect": true
+         },
+         {
+            "id": 3,
+            "text": ".demo",
+            "isCorrect": false
+         }
+      ]
+   },
+   {
+      "id": 5,
+      "text": "sdfgh",
+      "answers": [
+         {
+            "id": 1,
+            "text": "*demo",
+            "isCorrect": false
+         },
+         {
+            "id": 2,
+            "text": "#demo",
+            "isCorrect": true
+         },
+         {
+            "id": 3,
+            "text": ".demo",
+            "isCorrect": false
+         }
+      ]
+   }
+]

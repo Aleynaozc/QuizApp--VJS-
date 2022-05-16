@@ -1,0 +1,185 @@
+:root {
+   
+    --corner: 20px;
+}
+body {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+}
+.container {
+  padding-left:0px ;
+  width: 375px;
+  height: 712px;
+  border-radius: var(--corner);
+  box-shadow: 5px 5px 15px black;
+      
+} 
+.header{
+    position: relative;
+    width: inherit;
+    height: 190px;
+    width:375px;
+    margin-right:120px;
+    border-radius: var(--corner);
+    background-color:#b1978b ;
+    
+}
+.header__icon{
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+    
+}
+.header__icon__pos{
+position: relative;
+float:right;
+left:130px;
+display: flex;
+justify-content: space-between;
+width: 80px;
+
+}
+.fa-heart{
+    border:1px solid #f9f8f6;
+    border-radius: 20px;
+    font-size:15px;
+    padding: 4px;
+    color:#f9f8f6;
+
+}
+.fa-heart:hover{
+    color:#fa96ff;
+    border:1px solid #ea9eff;
+}
+.fa-user{
+    margin-right: 20px;
+    border:1px solid #fdfbf6;
+    border-radius: 20px;
+    font-size:15px;
+    padding: 4px;
+    color:#f9f8f6;
+}
+.fa-user:hover{
+color:#9fcff6;
+border:1px solid #b2dbfc;
+}
+.header__title{
+    height:inherit;
+    margin-left: 20px;
+}
+.header__main__title{
+    font-size:20px;
+    color:#f2ecea;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header__subtitle{
+    color:#e5d7cb;
+}
+.quiz__categories{
+    margin-top:50px;
+    width: 375px;
+    display:block;
+    position: relative;
+    
+}
+.quiz__categories__buttons{
+     display: flex;
+     justify-content: center;
+     cursor: pointer;
+ 
+}
+
+.open__questions__button{
+    background-color:#d8ccc5;
+    height:120px;
+    width: 340px;
+    border:none;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.quiz__title{
+    margin-top:40px;
+    margin-left: 20px;
+}
+.title__level{
+  font-weight: 600;
+  color:rgb(176, 109, 109);
+}
+.quiz__categories__name{
+    font-size:20px;
+    font-weight: 600;
+    color:#ac895b ;
+}
+.react__categories{
+    position: absolute;
+   bottom:70px;
+   margin-left: 220px;
+   width: 120px;
+   height: 90px;
+}
+.html__categories{
+    position: absolute;
+    bottom:70px;
+    margin-left: 245px;
+    width: 80px;
+    height: 80px;
+}
+.css__categories{
+    position: absolute;
+    bottom:70px;
+    margin-left: 250px;
+    width: 70px;
+    height: 75px;
+}
+.go__page{
+    text-decoration: none;
+    color:black;
+}
+.go__page:hover{
+    color:black;
+}
+
+
+
+                         /*USER MODAL*/
+.modal__quiz{
+    display: block;
+}
+.quiz__modal{
+    position:absolute;
+    width:inherit;
+    height: inherit;
+    background-color: rgba(128, 128, 128, 0.326);
+    z-index:999;
+    top:30px;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.quiz__modal.show{
+    position:absolute;
+    width:inherit;
+    height: inherit;
+    background-color: rgba(128, 128, 128, 0.326);
+    z-index:999;
+    top:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.quiz__modal-body{
+    width: 200px;
+    height: 200px;
+   border-radius: 20px;
+}
+.user-name{
+    width: inherit;
+    height: 100px;
+}
