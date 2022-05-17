@@ -5,7 +5,7 @@ let activeQuestionIndex = 0,
     interval = 0,
     time,
     counter,
-    timeValue = 20,
+    timeValue = 2,
     totalCorrectChoise = 0;
 const modal = document.querySelector(".quiz__modal");
 const closePage = document.getElementById('closePage')
@@ -27,7 +27,7 @@ const getQuestions = () => {
 const updateQuizOrder = () => {
 
     let quizOrderEl = document.querySelector("#quizOrder");
-    quizOrderEl.innerHTML = 'Question ' + parseInt(activeQuestionIndex +1) +' of ' + questionsCount;
+    quizOrderEl.innerHTML = 'Question ' + parseInt(activeQuestionIndex + 1) + ' of ' + questionsCount;
 
     if (activeQuestionIndex == questionsCount - 1) {
         document.querySelector('.next__title').innerHTML = 'COMPLETE'
@@ -40,7 +40,7 @@ const createQuestionAnswer = (activeQuestion) => {
     let questionAnswerHTML = "";
     activeQuestion.answers.forEach(answer => {
         questionAnswerHTML +=
-            `<div class="answer__button"  id="answerButton" data-id="${answer.id}" onclick="selectChoice(this)">
+            `<div class="answer__button"  id="answerButton" data-id="${answer.id}" onclick="selectChoice(this) ">
         <p class="question__answer "> ${answer.text}</p>
         </div>`;
     });
@@ -98,11 +98,11 @@ const nextQuestion = () => {
             if (totalCorrectChoise == questionsCount) {
                 let modalHTML = ` <img class="modal-gif"src="assets/images/congratulations-congrats.gif">
         `
-        ;
+                    ;
                 modal.innerHTML = modalHTML;
                 modal.classList.add("show");
                 setTimeout(closeModal, 7000)
-               
+
             } else { //OPEN REPEAT MODAL
                 let modalHTML = ` <div class="repat__modal">
             <button class="repat-button" onclick="repatQuiz()">Repat Again</button>
@@ -119,28 +119,30 @@ const nextQuestion = () => {
 }
 //Close congrats modal
 const closeModal = () => {
-if (totalCorrectChoise == questionsCount) {
-    window.location.href = "http://127.0.0.1:5500/mainpage.html";
-    modal.classList.remove("show");
-    } 
-    
+    if (totalCorrectChoise == questionsCount) {
+        window.location.href = "http://127.0.0.1:5500/mainpage.html";
+        modal.classList.remove("show");
+    }
+
 }
 
 
 //Close Question Page/Return Main PAge
 const closeQuestionPage = () => {
+
     window.location.href = "http://127.0.0.1:5500/mainpage.html";
 }
 closePage.addEventListener('click', closeQuestionPage);
-
 
 
 //COUNTDOWN COUNTER
 function startTimer(time) {
     counter = setInterval(timer, 1000)
     function timer() {
+
         timeCount.textContent = time;
         time--;
+
         if (time < 9) {
             let addZero = timeCount.textContent;
             timeCount.textContent = "0" + addZero;
@@ -148,9 +150,18 @@ function startTimer(time) {
         if (time < 0) {
             clearInterval(counter);
             document.querySelector('.timer').innerHTML = 'DONE'
+            //When time end button will be disabled.
+            const allOptions = questionContainer.children.length;
+            for (i = 0; i < allOptions; i++) {
+                questionContainer.children[i].classList.add("disabled"); //once user select an option then disabled all options
+                document.querySelector('.next__question__button').classList.add('next__button-show');
+            }
         
+
         }
     }
+
+
 }
 window.onload = function () {
     startTimer(timeValue);
@@ -166,11 +177,12 @@ const repatQuiz = () => {
     activeQuestionIndex = 0,
     selectedAnswer = undefined;
     totalCorrectChoise = 0;
-    timeValue = 20;
+    timeValue = 2;
     updateQuizOrder();
     closeRepeatModal();
     clearInterval(counter);
     startTimer(timeValue);
+    document.querySelector('.next__title').innerHTML = 'NEXT'
 }
 
 

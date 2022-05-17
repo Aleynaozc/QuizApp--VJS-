@@ -111,6 +111,11 @@ body {
 .disabled{
     pointer-events: none;
 }
+.next__button-show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
 
 .answer__button {
   border-radius: 20px;
