@@ -16,7 +16,7 @@
             <div class="header__icon">
                 <div class="header__icon__pos">
                 <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user" onclick="openSignIn()"></i>
             </div>
             </div>
             <div class="header__title">
@@ -65,9 +65,17 @@
         </a>
         </div>
         </div>
-        <div class="quiz__modal" >
-            <div class="quiz__modal-body">
-               
+        <div class="signIn_modal" >
+            <div class="signIn__modal-body">
+               <form class="signIn__form">
+                   <small class="signIn__name-title">User name</small>
+                   <input type="text" class="user__name" placeholder="User Name">
+                   <small class="signIn__name-title">Email</small>
+                   <input type="email" class="user__name" placeholder="Email">
+                   <small class="signIn__name-title">Password</small>
+                   <input type="password" class="user__name" placeholder="Password">
+                   <button class="signIn-button">Sign In</button>
+                </form>
              </div>
          </div>
   
