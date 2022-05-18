@@ -36,8 +36,8 @@ backPageButton.addEventListener('click', closeModal);
 
 const openSignUpModal=()=>{
     signUpModal.classList.add('show');
-    signUpButton.style.display='none';
-    signInButton.style.display='none';
+    
+    buttonsAnimation();
 }
 signUpButton.addEventListener('click', openSignUpModal);
 
