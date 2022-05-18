@@ -16,7 +16,7 @@
             <div class="header__icon">
                 <div class="header__icon__pos">
                 <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-user" onclick="openSignIn()"></i>
+                <i class="fa-solid fa-user" id="userIcon" ></i>
             </div>
             </div>
             <div class="header__title">
@@ -65,22 +65,54 @@
         </a>
         </div>
         </div>
-        <div class="signIn_modal" >
-            <div class="signIn__modal-body">
-               <form class="signIn__form">
-                   <small class="signIn__name-title">User name</small>
-                   <input type="text" class="user__name" placeholder="User Name">
-                   <small class="signIn__name-title">Email</small>
-                   <input type="email" class="user__name" placeholder="Email">
-                   <small class="signIn__name-title">Password</small>
-                   <input type="password" class="user__name" placeholder="Password">
-                   <button class="signIn-button">Sign In</button>
+                        <!-- MODALS-->
+        <div class="modals">
+            
+        <div class="signIn_signUp-modal" id="signInSignUpModal">
+            <i class="fa-solid fa-arrow-left" id="backPage" ></i>
+            <div class="signIn_signUp-modal-body">
+               <form class="signIn_signUp-form">
+                   <div id="signinbutton">
+                   <button type="button" class="signIn_signUp-button" id="signIn">Sign In</button>
+                </div>
+                <div id="signupbutton">
+                   <button type="button" class="signIn_signUp-button" id="signUp">Sign Up</button>
+                </div>
                 </form>
              </div>
          </div>
+          <!--SIGN UP MODAL-->
+         <div class="signUp_modal" id="signUpModal">
+            <div class="signUp__modal-body">
+               <form class="signUp__form">
+                   <small class="signUp__name-title" >User name</small>
+                   <input type="text" class="user__name" placeholder="User Name"  autocomplete="off">
+                   <small class="signUp__name-title" >Email</small>
+                   <input type="email" class="user__name" placeholder="Email"   autocomplete="off">
+                   <small class="signUp__name-title">Password</small>
+                   <input type="password" class="user__name" placeholder="Password"   autocomplete="off">
+                   <button type="submit" class="signUp-button">Sign Up</button>
+                </form>
+             </div>
+         </div>
+            <!--SIGN IN MODAL-->
+         <div class="signIn_modal" id="signInModal">
+            <div class="signIn__modal-body">
+               <form class="signIn__form">
+                   <small class="signIn__name-title" >User name</small>
+                   <input type="text" class="user__name" placeholder="User Name"  autocomplete="off">
+                   <small class="signIn__name-title">Password</small>
+                   <input type="password" class="user__name" placeholder="Password"   autocomplete="off">
+                   <button type="submit" class="signIn-button">Sign In</button>
+                </form>
+             </div>
+         </div>
+        </div>
+      
   
     </section>
-    <script src="questionpage.js"></script>
+    <script src="mainpage.js"></script>
+    
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

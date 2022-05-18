@@ -2,6 +2,49 @@
 
     --corner: 20px;
 }
+/* KEY FRAMES */
+@keyframes buttonAnimation {
+    0% {
+      top: 0%;
+      position: relative;
+    }
+   
+   100% {
+      top: 130%;
+      position: relative;
+      opacity: 0.2;
+    }
+  }
+@keyframes openModal {
+    from {
+      height: 0;
+    }
+  
+    to {
+      height: 88%;
+    }
+  }
+  @keyframes closeModal {
+    0% {
+      width: 30%;
+    }
+  
+    100% {
+      width: 0%;
+      
+    }
+  }
+  .closeModal-animation{
+    animation-duration: 0.7s;
+    animation-name: closeModal;
+  }
+.height-animation{
+    animation-duration: 1s;
+    animation-name: openModal;
+}
+.button-animation{
+    animation: buttonAnimation 0.7s ease-in-out;
+}
 
 body {
     padding: 0px;
@@ -171,35 +214,148 @@ body {
 .go__page:hover {
     color: black;
 }
+.modals{
+    
+    width: inherit;
+    height: inherit;
+    z-index: 999;
+    top: 30px;
+    
+}
+
+/*CHOOSE SİGNIN OR SIGNUP MODAL*/
+.signIn_signUp-modal{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: 999;
+    top: 30px;
+    /* background-color: #e9d2d2; */
+    background-image: url(assets/images/Fabien\ Sarazin\ _\ ÔPOS.jpg);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    /* animation-duration: 1s;
+    animation-name: openModal; */
+}
 
 
 
-/*USER MODAL*/
+.signIn_signUp-modal.show {
+    display: flex;
+}
+.signIn_signUp-modal-body{
+    width: 300px;
+    height: 300px;
+    border-radius: 70px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.signIn_signUp-form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+   
+}
+.signIn_signUp-button{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    color: #fcfcfc;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#signUp{
+    background-color: #b76d8d;
+ 
+    
+}
+#signIn{
+
+    background-color: #688579;
+    
+}
+/*SIGN Up MODAL*/
+.signUp_modal {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: 999;
+    top: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    animation-duration: 0.6s;
+    animation-name: openModal;
+}
+
+.signUp_modal.show {
+    display: flex;
+}
+
+.signUp__modal-body {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    background-color: #83759ac8;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color:white;
+}
+
+.signUp__form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 250px;
+
+}
+.signUp__name-title{
+    margin-top: 10px;
+    float: left;
+}
+
+.signUp-button{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: #885da7;
+    border-radius: 4px;
+    color: #fcfcfc;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*SIGN IN MODAL*/
 
 .signIn_modal {
     position: absolute;
     width: inherit;
     height: inherit;
-    background-color: #bfa7ce9c;
     z-index: 999;
     top: 30px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    animation-duration: 0.6s;
+    animation-name: openModal;
 }
 
 .signIn_modal.show {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    background-color: rgba(128, 128, 128, 0.326);
-    z-index: 999;
-    top: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
 }
 
 .signIn__modal-body {
@@ -207,10 +363,11 @@ body {
     height: 300px;
     border-radius: 20px;
     display: flex;
-    background-color: #dbe9f9ef;
+    background-color: #9dbaabb1;
     justify-content: center;
     text-align: center;
     align-items: center;
+   
 }
 
 .signIn__form {
@@ -235,7 +392,7 @@ body {
     margin-top: 20px;
     width: 100px;
     height: 40px;
-    background-color: #0072d0;
+    background-color: #688579;
     border-radius: 4px;
     color: #fcfcfc;
     border:none;
@@ -245,5 +402,13 @@ input::placeholder{
     color:#61370176;   
 }
 
-
+.fa-arrow-left{
+    background-color: #a4a09a6f;
+    border-radius: 4px;
+    padding:5px 7px 7px 5px;
+    left:40px;
+    top:40px;
+    position: absolute;
+    font-size: 20px;
+}
 
