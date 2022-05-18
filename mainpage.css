@@ -21,7 +21,7 @@
     }
   
     to {
-      height: 88%;
+      height: 84%;
     }
   }
   @keyframes closeModal {
@@ -59,7 +59,7 @@ body {
     height: 712px;
     border-radius: var(--corner);
     box-shadow: 5px 5px 15px black;
-
+    background-color: #eeebe5;
 }
 
 .header {
@@ -69,7 +69,8 @@ body {
     width: 375px;
     margin-right: 120px;
     border-radius: var(--corner);
-    background-color: #b1978b;
+     background-color: #b1b1cc; 
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 
 }
@@ -129,13 +130,13 @@ body {
 
 .header__main__title {
     font-size: 20px;
-    color: #6c3d01;
+    color: #464684;
     font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header__subtitle {
-    color: #f6f4f2;
+    color: #ffffff;
 }
 
 .quiz__categories {
@@ -154,12 +155,12 @@ body {
 }
 
 .open__questions__button {
-    background-color: #d8ccc5;
+    background-color: #ddddef;
     height: 120px;
     width: 340px;
     border: none;
     border-radius: 20px;
-    box-shadow: rgba(248, 248, 248, 0.226) 0px 50px 100px -20px, rgba(255, 255, 255, 0.505) 0px 30px 60px -30px, #893b0e 0px -2px 6px 0px inset;
+    box-shadow: rgba(248, 248, 248, 0.226) 0px 50px 100px -20px, rgba(255, 255, 255, 0.505) 0px 30px 60px -30px,#7b7bac 0px -2px 6px 0px inset;
 }
 
 .quiz__title {
@@ -169,17 +170,17 @@ body {
 
 .title__level {
     font-weight: 600;
-    color: rgb(101, 164, 188);
+    color: #7b7bac;
 }
 
 .quiz__categories__name {
     font-size: 20px;
     font-weight: 600;
-    color: #985700;
+    color: #6b6ba9;
 }
 
 .quiz__categories__name:hover {
-    color: #613801;
+    color: #464684;
 }
 
 .react__categories {
@@ -230,14 +231,13 @@ body {
     height: inherit;
     z-index: 999;
     top: 30px;
-    /* background-color: #e9d2d2; */
-    background-image: url(assets/images/Fabien\ Sarazin\ _\ ÔPOS.jpg);
+    /* background-image: url(assets/images/Fabien\ Sarazin\ _\ ÔPOS.jpg); */
     display: none;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    /* animation-duration: 1s;
-    animation-name: openModal; */
+    background: linear-gradient(to bottom,#b1b1cc, #ddddef );
+   
 }
 
 
@@ -274,8 +274,9 @@ body {
     border:none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 #signUp{
-    background-color: #b76d8d;
+    background-color: #885da7;
  
     
 }
@@ -403,12 +404,18 @@ input::placeholder{
 }
 
 .fa-arrow-left{
-    background-color: #a4a09a6f;
+    background-color: #a7a7ce;
     border-radius: 4px;
     padding:5px 7px 7px 5px;
-    left:40px;
-    top:40px;
-    position: absolute;
+    left:30px;
+    width: 30px;
+    display: none;
+    bottom:600px;
+    z-index: 9999;
+    position: relative;
     font-size: 20px;
+    color:#464684;
 }
-
+.fa-arrow-left.show{
+    display: block;
+}

@@ -1,69 +1,66 @@
 const openModalButton=document.querySelector('#userIcon');
-const signInModalButton=document.querySelector('#signIn');
-const signUpModalButton=document.querySelector('#signUp');
-const signInSignUpModal=document.querySelector('#signInSignUpModal');
-const signInOpenModal=document.querySelector('#signInModal');
-const signUpOpenModal=document.querySelector('#signUpModal');
-const signInSignUpButton=document.querySelector('.signIn_signUp-form');
-const signInButton=document.querySelector('#signinbutton');
-const signUpButton=document.querySelector('#signupbutton');
-const backPage=document.getElementById('backPage')
-
-
-
-//OPEN SIGN IN AND SIGN UP MODAL
-const openModal =()=>{
-    signInSignUpModal.classList.toggle("show");
-    signInSignUpModal.classList.toggle('height-animation');
-    signInButton.style.display='block';
+const signInUpModal=document.querySelector('.signIn_signUp-modal')
+const backPageButton=document.getElementById('backPage');
+const signUpModal=document.querySelector('.signUp_modal')
+const signUpButton=document.querySelector('#signUp');
+const signInModal=document.querySelector('.signIn_modal');
+const signInButton=document.querySelector('#signIn');
+const signUpBtnAn=document.querySelector('#signupbutton');
+const signInBtnAn=document.querySelector('#signinbutton');
+//OPEN SIGN IN/UP BUTTON MODAL
+const openModal=()=>{
+    signInUpModal.classList.add('show','height-animation');
+    backPageButton.classList.add('show');
     signUpButton.style.display='block';
-    backPage.style.display='block';
-    
+    signInButton.style.display='block';
+    signInUpModal.classList.remove('closeModal-animation');
+    signInBtnAn.classList.remove('button-animation');
+    signUpBtnAn.classList.remove('button-animation');
 }
 openModalButton.addEventListener('click', openModal);
 
-//BUTTON DISABLED
-const buttonNone=()=>{
-    signInSignUpButton.style.display="none";
- }
-//OPEN SIGN IN MODAL
-const OpenSignInModal=()=>{
-    signInOpenModal.classList.add("show");
-} 
-const SignInanimationOfButton =()=>{
-    signInButton.classList.add('button-animation');
-    signUpButton.classList.add('button-animation');
-    setTimeout(buttonNone,600);
-    setTimeout(OpenSignInModal,300);
-   
+//When click back arrow icon close modal
+const closeModal=()=>{
+     backPageButton.classList.remove('show');
+     signUpModal.classList.remove('show');
+     signInModal.classList.remove('show');
+     signUpButton.style.display='none';
+     signInButton.style.display='none';
+     signInUpModal.classList.remove('height-animation');
+     signInUpModal.classList.add('closeModal-animation');
+     setTimeout(hiddenAllModal,500);
 }
-signInModalButton.addEventListener('click', SignInanimationOfButton);
-
-
+backPageButton.addEventListener('click', closeModal);
 
 //OPEN SIGN UP MODAL
-const OpenSignUpModal=()=>{
-    signUpOpenModal.classList.add("show");
-}
-const SignUpanimationOfButton =()=>{
-    signInButton.classList.add('button-animation');
-    signUpButton.classList.add('button-animation');
-    setTimeout(buttonNone,600);
-    setTimeout(OpenSignUpModal,550);
-}
-signUpModalButton.addEventListener('click', SignUpanimationOfButton);
 
-const backPageButton =()=>{
-    signInSignUpModal.classList.remove('height-animation');
-        signInSignUpModal.classList.add('closeModal-animation');
-        signInButton.style.display='none';
-        signUpButton.style.display='none';
-        backPage.style.display='none';
-        setTimeout(removeModal,700);
+const openSignUpModal=()=>{
+    signUpModal.classList.add('show');
+    signUpButton.style.display='none';
+    signInButton.style.display='none';
+}
+signUpButton.addEventListener('click', openSignUpModal);
 
+const openSignInModal=()=>{
+    signInModal.classList.add('show');
+    buttonsAnimation();
 }
-const removeModal=()=>{
-    signInSignUpModal.classList.remove('show');
-    
+signInButton.addEventListener('click', openSignInModal);
+
+const hiddenButton =()=>{
+    signUpButton.style.display='none';
+    signInButton.style.display='none';
 }
-backPage.addEventListener('click',backPageButton);
+const buttonsAnimation  =()=>{
+    signInBtnAn.classList.add('button-animation');
+    signUpBtnAn.classList.add('button-animation');
+    setTimeout(hiddenButton,300);
+}
+
+const hiddenAllModal  =()=>{
+   signInUpModal.classList.remove('show');
+}
+
+
+
+
