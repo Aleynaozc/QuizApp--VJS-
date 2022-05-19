@@ -1,24 +1,26 @@
 let QUESTIONS = [];
+let htmlquestions=[];
+let reactquestions=[];
 let activeQuestionIndex = 0,
     questionsCount = 0,
     selectedAnswer,
     interval = 0,
     time,
     counter,
-    timeValue = 2,
+    timeValue = 30,
     totalCorrectChoise = 0;
 const modal = document.querySelector(".quiz__modal");
 const closePage = document.getElementById('closePage')
 const timeCount = document.querySelector('.timer');
-
+const cssBtn=document.querySelector('#CssBtn')
 const getQuestions = () => {
     fetch("./questions.json")
         .then((res) => {
             return res.json();
         })
         .then((questions) => {
-            QUESTIONS = questions;
-            questionsCount = QUESTIONS.length;
+            QUESTIONS = questions.CSS3;
+           
         });
 
 };
@@ -82,6 +84,7 @@ const checkAnswer = () => {
     );
     if (selectedAnswerObj.isCorrect)
         totalCorrectChoise++;
+        selectedAnswer=null;
 }
 
 
@@ -95,13 +98,12 @@ const nextQuestion = () => {
             updateQuizOrder();
         } else { // OPEN CONGRAT MODAL IF U'RE DONE successfully
             clearInterval(counter);
+            updateQuizOrder();
             if (totalCorrectChoise == questionsCount) {
-                let modalHTML = ` <img class="modal-gif"src="assets/images/congratulations-congrats.gif">
-        `
-                    ;
+                let modalHTML = ` <img class="modal-gif"src="assets/images/congratulations-congrats.gif">`;
                 modal.innerHTML = modalHTML;
                 modal.classList.add("show");
-                setTimeout(closeModal, 7000)
+                setTimeout(closeModal, 4000)
 
             } else { //OPEN REPEAT MODAL
                 let modalHTML = ` <div class="repat__modal">
@@ -177,7 +179,7 @@ const repatQuiz = () => {
     activeQuestionIndex = 0,
     selectedAnswer = undefined;
     totalCorrectChoise = 0;
-    timeValue = 2;
+    timeValue = 30;
     updateQuizOrder();
     closeRepeatModal();
     clearInterval(counter);
