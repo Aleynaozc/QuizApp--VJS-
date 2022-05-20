@@ -10,25 +10,24 @@ let activeQuestionIndex = 0,
     timeValue = 30,
     totalCorrectChoise = 0;
 const modal = document.querySelector(".quiz__modal");
-const closePage = document.getElementById('closePage')
+const closePage = document.getElementById('closePage');
 const timeCount = document.querySelector('.timer');
 const cssBtn=document.querySelector('#CssBtn');
-const nextBtn=document.querySelector('.next__title');
-nextBtn.style.backgroundColor='#9eb5df';
-nextBtn.style.border='1px solid #8ba5d6';
-nextBtn.style.color="rgb(4, 102, 159)"
 const containerHtml=document.querySelector('.container');
-containerHtml.style.backgroundImage = 'url(./assets/images/css.jpg)';
-
+containerHtml.style.backgroundImage = 'url(./assets/images/html.jpg)';
+const nextBtn=document.querySelector('.next__title');
+nextBtn.style.backgroundColor='#f1d3d5';
+nextBtn.style.border='1px solid rgb(211, 93, 144)';
+nextBtn.style.color=' rgb(211, 93, 144)';
 const getQuestions = () => {
     fetch("./questions.json")
         .then((res) => {
             return res.json();
         })
         .then((questions) => {
-            QUESTIONS = questions.CSS3;
+            QUESTIONS = questions.HTML5;
             questionsCount=QUESTIONS.length;
-            htmlquestions=questions.HTML5;
+           
         });
 
 };
@@ -76,13 +75,13 @@ const selectChoice = (el) => {
         document.querySelectorAll(".answer__button")
     );
     questionAnswerEls.find((el) => {
-        if (el.classList.contains("answer__color__change","css"))
-            el.classList.remove("answer__color__change","css");
+        if (el.classList.contains("answer__color__change","html"))
+            el.classList.remove("answer__color__change","html");
 
     });
 
     selectedAnswer = el.dataset.id;
-    el.classList.add("answer__color__change","css")
+    el.classList.add("answer__color__change","html")
 
 };
 

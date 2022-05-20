@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-    --btn--color:rgb(248, 219, 219), rgba(255, 170, 0, 0.651);
+    --btn--color:#f1f4f78f, #c1d5e4;
     --corner: 20px;
 }
 
@@ -16,7 +16,7 @@ body {
     height: 712px;
     border-radius: var(--corner);
     box-shadow: 5px 5px 15px black;
-    background-image: url(./assets/images/bg.jpg);
+   
 
 }
 
@@ -58,8 +58,8 @@ body {
 
 .timer {
     cursor: pointer;
-    border: 1px solid #d6d3d3;
-    background-color: #eadacb;
+    border: 1px solid #848484;
+    background-color: #eadacb48;
     border-radius: 20px;
     padding: 7px 10px 5px 10px;
     align-items: center;
@@ -130,14 +130,27 @@ body {
   height: 70px;
   margin-bottom: 20px;
 }
-.answer__color__change{
-    color:rgb(239, 109, 3);
+.answer__color__change-react{
+
     cursor:pointer;
     padding: 3px 10px 3px 10px;
     text-align: center;
     border-radius: 20px;
-    background-image: linear-gradient(to right, var(--btn--color));
+   
 }
+.react{
+    background-image: linear-gradient(to right, var(--btn--color));
+    color:rgb(0, 91, 140);
+}
+.html{
+    background-image: linear-gradient(to right, rgb(248, 247, 247),rgba(241, 158, 172, 0.557));
+    color:rgb(211, 93, 144);
+}
+.css{
+    background-image: linear-gradient(to right, rgb(255, 255, 255),rgba(3, 113, 232, 0.557));
+    color:rgb(4, 102, 159);
+}
+
 
 
 .question__answer {
@@ -153,14 +166,16 @@ body {
 }
 
 .next__title{
+    color:#ffffff;
     cursor:pointer;
     padding: 10px 20px 10px 20px;
     text-align: center;
     border-radius: 20px;
     transition: 0.5s;
-    border:1px solid #cea179;
-    background-color: #d3b498;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.next__title:hover{
+    color:#545454;
 }
 .modal__quiz{
     display: block;

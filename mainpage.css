@@ -212,6 +212,8 @@ body {
 .go__page {
     text-decoration: none;
     color: black;
+    animation-duration: 1s;
+    animation-name: openModal;
 }
 
 .go__page:hover {
