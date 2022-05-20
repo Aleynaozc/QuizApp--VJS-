@@ -1,6 +1,5 @@
 let QUESTIONS = [];
-let htmlquestions=[];
-let reactquestions=[];
+
 let activeQuestionIndex = 0,
     questionsCount = 0,
     selectedAnswer,
@@ -28,7 +27,7 @@ const getQuestions = () => {
         .then((questions) => {
             QUESTIONS = questions.CSS3;
             questionsCount=QUESTIONS.length;
-            htmlquestions=questions.HTML5;
+            
         });
 
 };
