@@ -14,6 +14,8 @@ const closePage = document.getElementById('closePage');
 const timeCount = document.querySelector('.timer');
 const cssBtn=document.querySelector('#CssBtn');
 const containerHtml=document.querySelector('.container');
+const modalGiphy=document.querySelector('.modal-gif');
+const congText=document.querySelector('.cong-text');
 containerHtml.style.backgroundImage = 'url(./assets/images/html.jpg)';
 const nextBtn=document.querySelector('.next__title');
 nextBtn.style.backgroundColor='#f1d3d5';
@@ -107,11 +109,21 @@ const nextQuestion = () => {
             clearInterval(counter);
             updateQuizOrder();
             if (totalCorrectChoise == questionsCount) {
-                let modalHTML = ` <img class="modal-gif"src="assets/images/party.gif">`;
-                modal.innerHTML = modalHTML;
+                setTimeout(() => {
+                    let modalHTML = ` <img class="modal-gif" src="assets/images/party.gif">
+                    `;
+                    modal.innerHTML = modalHTML;
+                   
+                    modal.classList.add("show");
+                },100);
+                setTimeout(() => {
+                    let modaleHTML = `
+                <p class="cong-text">YOU'r the BEST ! </p>
+                `;
+                modal.innerHTML = modaleHTML;
                 modal.classList.add("show");
-                setTimeout(closeModal, 4000)
-
+                },1200);
+                setTimeout(closeModal, 3000)
             } else { //OPEN REPEAT MODAL
                 let modalHTML = ` <div class="repat__modal">
             <button class="repat-button" onclick="repatQuiz()">Repat Again</button>

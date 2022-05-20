@@ -325,17 +325,17 @@
         "answers": [
            {
               "id": 1,
-              "text": "<dl>",
+              "text": "dl",
               "isCorrect": false
            },
            {
               "id": 2,
-              "text": "<ol>",
+              "text": "ol",
               "isCorrect": true
            },
            {
               "id": 3,
-              "text": "<list>",
+              "text": "list",
               "isCorrect": false
            }
         ]
