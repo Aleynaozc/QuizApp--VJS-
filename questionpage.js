@@ -107,7 +107,7 @@ const nextQuestion = () => {
             clearInterval(counter);
             updateQuizOrder();
             if (totalCorrectChoise == questionsCount) {
-                let modalHTML = ` <img class="modal-gif"src="assets/images/congratulations-congrats.gif">`;
+                let modalHTML = ` <img class="modal-gif"src="assets/images/party.gif">`;
                 modal.innerHTML = modalHTML;
                 modal.classList.add("show");
                 setTimeout(closeModal, 4000)
